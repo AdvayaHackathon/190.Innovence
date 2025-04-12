@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeFixer</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CodeFixer</h1>
+        <p>Select a level to start fixing C code!</p>
+        <div class="levels">
+            <button data-level="1">Level 1: Variables</button>
+            <button data-level="2">Level 2: Data Types</button>
+            <button data-level="3">Level 3: Operators</button>
+            <button data-level="4">Level 4: Conditionals</button>
+            <button data-level="5">Level 5: Loops</button>
+            <button data-level="6">Level 6: Arrays</button>
+            <button data-level="7">Level 7: Functions</button>
+            <button data-level="8">Level 8: Pointers</button>
+            <button data-level="9">Level 9: Structures</button>
+            <button data-level="10">Level 10: Mixed</button>
+        </div>
+        <div id="gameArea" style="display: none;">
+            <h2 id="levelTitle"></h2>
+            <p id="questionCount"></p>
+            <p>Find the error in this code:</p>
+            <pre id="questionCode"></pre>
+            <p id="questionText">What is wrong? How would you fix it?</p>
+            <textarea id="userAnswer" rows="4" placeholder="Describe the error and provide the fix"></textarea>
+            <button onclick="checkAnswer()">Submit Answer</button>
+            <p id="feedback"></p>
+            <pre id="example" style="display: none;"></pre>
+            <button onclick="nextQuestion()" id="nextBtn" style="display: none;">Next Question</button>
+        </div>
+        <a href="../index.html" class="btn">Back to Home</a>
+    </div>
+    <script src="codefixer.js"></script>
+</body>
+</html>
